@@ -1,8 +1,6 @@
-![Hexo Logo](https://github.com/vercel/vercel/blob/main/packages/frameworks/logos/hexo.svg)
+# NanamiNakano's Blog
 
-# Hexo Example
-
-This directory is a brief example of a [Hexo](https://hexo.io/) site that can be deployed to Vercel with zero configuration.
+Personal Blog Created with Hexo and Markdown. Deployed with Vercel.
 
 ## Deploy Your Own
 
@@ -12,10 +10,6 @@ Deploy your own Hexo project with Vercel.
 
 _Live Example: https://hexo-template.vercel.app_
 
-### How We Created This Example
+## License
 
-To get started with Hexo for deployment with Vercel, you can use the [Hexo CLI](https://hexo.io/docs/index.html#Installation) to initialize the project:
-
-```shell
-$ hexo init project-name
-```
+All text content is published based on the CC BY SA 4.0
