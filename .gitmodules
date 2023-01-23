@@ -1,3 +1,6 @@
 [submodule "themes/Hacker"]
 	path = themes/Hacker
 	url = https://github.com/CodeDaraW/Hacker
+[submodule "themes/next"]
+	path = themes/next
+	url = https://github.com/theme-next/hexo-theme-next
