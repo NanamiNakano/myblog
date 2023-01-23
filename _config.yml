@@ -8,7 +8,7 @@ subtitle:
 description: A gamer"s bio
 keywords:
 author: NotKiller
-language: zh_CN
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
@@ -75,7 +75,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Hacker
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
