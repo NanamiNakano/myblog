@@ -14,10 +14,13 @@
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-marked": "^3.3.0",
+    "hexo-renderer-markdown-it": "^6.1.0",
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^2.0.0",
-    "hexo-word-counter": "^0.1.0"
+    "hexo-word-counter": "^0.1.0",
+    "markdown-it-checkbox": "^1.1.0",
+    "markdown-it-expandable": "^1.0.2",
+    "markdown-it-imsize": "^2.0.1"
   },
   "scripts": {
     "dev": "hexo server -p $PORT",
