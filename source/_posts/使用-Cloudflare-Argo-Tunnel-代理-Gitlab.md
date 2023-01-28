@@ -10,13 +10,14 @@ tags:
 
 绕过备案检测使 URL 不带端口号
 
-## 原理
+### 原理
 
 通过分析 Gitlab-CE 源代码可以找到内置 Nginx 的工作方式
 
 https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/lib/support/nginx/gitlab-ssl
 
 ```nginx
+# 前面忽略
 upstream gitlab-workhorse {
   # GitLab socket file,
   # for Omnibus this would be: unix:/var/opt/gitlab/gitlab-workhorse/sockets/socket
@@ -49,11 +50,12 @@ server {
   proxy_pass http://gitlab-workhorse;
   }
 }
+#后面忽略
 ```
 
-可以发现几乎就是直接把流量交给 Gitlab Workhorse 处理, Nginx 只负责重定向, 之间通过 Socket 连接.
+可以发现几乎就是直接把流量交给 Gitlab Workhorse 处理, Nginx 只负责重定向, 提供静态资源, 之间通过 Socket 连接.
 
-Argo Tunnel 可以将本地的服务映射到公网.
+Argo Tunnel 可以将本地的服务映射到公网, 也可作为网关转发流量.
 
 因此使用 Argo Tunnel 代替 Nginx 可行.
 
@@ -82,7 +84,8 @@ external_url 'https://git.targetdomain.com'
 # 修改成最终呈现的 URL
 gitlab_rails['trusted_proxies'] = ['0.0.0.0/0']
 # 允许目标 IP 与 Gitlab Workhorse 建立连接
-# Warning: 因为 Argo Tunnel 的远程主机 IP 并不固定, 我也没测出来所有的 IP 段(太多了), 因此这里允许所有主机建立连接,. 出于安全原因你需要配置本地防火墙禁止外部连接(关闭对应端口, 即 Gitlab Workhorse 监听的端口), Argo Tunnel 不会因此无法建立连接(在本地建立的自然不影响)
+# Warning: 因为 Argo Tunnel 的远程主机 IP 并不固定, 我也没测出来所有的 IP 段(太多了), 因此这里允许所有主机建立连接.
+# 出于安全原因你需要配置本地防火墙禁止外部连接(关闭对应端口, 即 Gitlab Workhorse 监听的端口), Argo Tunnel 不会因此无法建立连接(在本地建立的自然不影响)
 gitlab_workhorse['listen_network'] = "tcp"
 gitlab_workhorse['listen_addr'] = "0.0.0.0:10080"
 # 让 Workhorse 在 10080 监听

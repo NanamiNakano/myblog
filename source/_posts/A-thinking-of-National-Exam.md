@@ -6,7 +6,7 @@ tags:
 
 
 
-我是 NanamiNakano, a normal 15 y.o. student. 今年是 2023 年, 我得有几年没写过年终总结了.
+我是 NanamiNakano, aka. NotKiller. A normal 15 y.o. student. 今年是 2023 年, 我得有几年没写过年终总结了.
 
 ## 新年观后感
 
