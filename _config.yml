@@ -17,6 +17,8 @@ url: https://www.notkiller.moe
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+sitemap:
+  path: sitemap.xml
 
 
 # Directory
@@ -81,3 +83,21 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# Search
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
+# Symbols Count
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  awl: 2
+  wpm: 300
+  suffix: "mins."

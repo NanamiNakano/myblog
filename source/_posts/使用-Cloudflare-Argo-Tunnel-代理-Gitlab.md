@@ -102,7 +102,7 @@ Step4. 配置 Tunnel
 
 在 Tunnel 管理界面 -> Public Hostname 新建一个主机名
 
-![Hostname](https://img1.imgtp.com/2023/01/27/co6KAeiM.png)
+![Hostname](https://s2.loli.net/2023/01/28/bUPzfOeNDQF4nBR.png)
 
 Subdomain 与 Domain 按需填写, 需要与 gitlab.rb 中保持一致
 
